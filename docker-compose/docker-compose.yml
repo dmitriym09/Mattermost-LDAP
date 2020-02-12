@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+        
+        database:
+                build: ../Docker/postgres
+                image: mattermost_ldap_db
+
+        oauth:
+                build: ../Docker/oauth
+                image: mattermost_ldap_oauth
+                ports:
+                        - '80:80'
